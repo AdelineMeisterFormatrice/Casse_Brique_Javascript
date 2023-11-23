@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casse Brique</title>
+	<style type="text/css">
+		* { padding: 0; margin: 0; }
+		canvas { background: #060606;  display: block; margin:0 auto;}
+	</style>
+</head>
+<body>
+
+	<canvas id="monCanevas" width="480" height="320"></canvas>
+
+	<script type="text/javascript">
+		
+		var canvas = document.getElementById("monCanevas");
+		var context = canvas.getContext("2d");
+
+		function draw()
+		{
+			// le code pour dessiner
+			context.beginPath();
+			context.arc(50,50,10,0,Math.PI*2);
+			context.fillStyle = "#ed151b";
+			context.fill();
+			context.closePath();
+		}
+
+		setInterval(draw,10);
+	</script>
+
+</body>
+</html>
